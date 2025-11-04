@@ -3,9 +3,9 @@ import argparse
 import os
 import sys
 
-def clean_peloton_tcx(input_file, output_file=None):
+def clean_Strava_tcx(input_file, output_file=None):
     """
-    Cleans up a Peloton TCX file for better compatibility with Garmin Connect.
+    Cleans up a Strava TCX export file for better compatibility with Garmin Connect.
     - Removes leading/trailing whitespace from the file content.
     - Parses and re-serializes the XML to ensure well-formed structure.
     - Removes the <Creator> tag entirely.
@@ -16,7 +16,7 @@ def clean_peloton_tcx(input_file, output_file=None):
     - Rounds float values to integers for heart rate, cadence, calories, and watts where appropriate.
     
     Args:
-        input_file (str): Path to the input Peloton TCX file.
+        input_file (str): Path to the input Strava TCX file.
         output_file (str, optional): Path to the output cleaned file. If None, overwrites input.
     
     Returns:
@@ -168,13 +168,13 @@ def clean_peloton_tcx(input_file, output_file=None):
     return output_file
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Clean Peloton TCX file for Garmin Connect compatibility.")
-    parser.add_argument("input_file", help="Path to the input Peloton TCX file")
+    parser = argparse.ArgumentParser(description="Clean Strava TCX file for Garmin Connect compatibility.")
+    parser.add_argument("input_file", help="Path to the input Strava TCX file")
     parser.add_argument("-o", "--output_file", help="Path to the output cleaned file (optional)")
     
     args = parser.parse_args()
     try:
-        clean_peloton_tcx(args.input_file, args.output_file)
+        clean_strava_tcx(args.input_file, args.output_file)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
