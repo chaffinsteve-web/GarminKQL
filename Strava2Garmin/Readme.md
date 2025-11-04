@@ -1,4 +1,4 @@
-# Peloton to Strava to Garmin Convertor tool
+# Peloton to Strava to Garmin Converter tool
 
 When using Peloton for indoor cycling workouts, users often share their activity data directly to Strava for broader tracking and social features; however, exporting these activities from Strava as TCX files frequently results in compatibility issues with Garmin Connect, leading to upload errors like “unsupported file type” or generic failures due to non-standard elements such as resistance data or malformed extensions. To address this, the provided Python-based tool processes the Strava-exported TCX file by removing invalid tags, rounding values to schema-compliant integers, and restructuring extensions, ensuring seamless recognition and import into Garmin Connect for accurate logging of metrics like heart rate, cadence, and power.
 
