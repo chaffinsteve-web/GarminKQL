@@ -168,13 +168,13 @@ def clean_strava_peloton_tcx(input_file, output_file=None):
     return output_file
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Clean Pelogon to Strava TCX file for Garmin Connect compatibility.")
+    parser = argparse.ArgumentParser(description="Clean Peloton to Strava TCX file for Garmin Connect compatibility.")
     parser.add_argument("input_file", help="Path to the input Strava TCX file")
     parser.add_argument("-o", "--output_file", help="Path to the output cleaned file (optional)")
     
     args = parser.parse_args()
     try:
-        clean_strava_tcx(args.input_file, args.output_file)
+        clean_strava_peloton_tcx(args.input_file, args.output_file)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
