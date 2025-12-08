@@ -11,3 +11,5 @@ If you need more instructions...
 Follow these step-by-step instructions to share a Peloton activity to Strava, export it as a TCX file, clean it using a Python script for compatibility, and then import it into Garmin Connect. This process addresses common issues like Garmin rejecting TCX files due to non-standard elements in Peloton data. Note that Peloton activities are indoor rides without GPS data, so the resulting file will reflect that.
 
 Details here: [Converting and Importing a Peloton Activity to Garmin Connect via Strava](https://rodtrent.substack.com/p/converting-and-importing-a-peloton)
+
+Want a version with a user interface (instead of one that uses a command-line)? See: [Streamlit-Powered Peloton to Garmin TCX Fixer: Say Goodbye to Upload Errors](https://github.com/rod-trent/JunkDrawer/tree/main/Peloton2Strava2Garmin)
